@@ -5,9 +5,11 @@
 # Ruby
 > Ruby is a dynamic, interpreted, reflective, object-oriented, general-purpose programming language. It was designed and developed in the mid-1990s by Yukihiro Matsumoto "Matz" in Japan. "Wikipedia"
 
-**Here** I am trying to keep track of my progress in Ruby and share whatever I am learning with sample projects and some explanations. :clapper: (22/12/2018)
+**Here** I am trying to keep track of my progress in Ruby and share whatever I am learning with sample projects and some explanations.:clapper: (22/12/2018)
 
-## conventions in Ruby ((differences with Js))
+**Note** This is a self-study and for this goal I selected Ruby course in [codecademy](https://www.codecademy.com). 
+
+### conventions in Ruby ((differences with Js))
 
 **lesson1:** (23/12/2018)
 - Parentheses and semicolon are not important in Ruby. ((Unlike Js))
