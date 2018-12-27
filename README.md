@@ -5,9 +5,12 @@
 # Ruby
 > Ruby is a dynamic, interpreted, reflective, object-oriented, general-purpose programming language. It was designed and developed in the mid-1990s by Yukihiro Matsumoto "Matz" in Japan. "Wikipedia"
 
-**Here** I am trying to keep track of my progress in Ruby and share whatever I am learning with sample projects and some explanations.:clapper: (22/12/2018)
 
-**Note** This is a self-study and for this goal I selected Ruby course in [codecademy](https://www.codecademy.com). 
+**Here** I am trying to keep track of my progress in Ruby and share whatever I am learning with sample projects and some explanations.
+
+**Note:** To reach my goal I selected *Ruby* course in [codecademy](https://www.codecademy.com). I will enrich my knowledge in this field later when my course resume in [GA](https://generalassemb.ly) after holiday.
+
+:clapper: (22/12/2018)
 
 ### conventions in Ruby ((differences with Js))
 
@@ -65,11 +68,18 @@
 
 **Methods**
 - `Hash.new`: creates an empty hash. `Hash` must be capitalized!
-- `sort_by`: sorts elements from smallest to largest by value count. This method returns an array of arrays. (The syntax is like `hash.sort_by { |x, y| y }`)
+- `sort_by`: sorts elements from smallest to largest *by* value count. This method returns an array of arrays. (The syntax is like `hash.sort_by { |x, y| y }`)
 - `reverse`
 - `to_s`: converts the value to a string.
 
 ---
 
+**lesson5:** (27/12/2018)
+- `def` defines method in Ruby. ((function in Js))
+- Methods end with `end` keyword.
+- *Splat arguments* are arguments preceded by a `*`, which tells the program that the method can receive one or more arguments.
+- Blocks can be defined with either the keywords `do` and `end` or with curly braces `{}`.
+- The *combined comparison operator*: `<=>`. It returns `0` if the first operand (item to be compared) equals the second, `1` if the first operand is greater than the second, and `-1` if the first operand is less than the second.
 
-
+**Methods**
+- `sort`: sorting items alphabetically or in ascending order.
