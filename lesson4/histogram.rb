@@ -1,7 +1,7 @@
 puts "Enter a phrase you'd like to analyze: "
 text = gets.chomp
 
-words = text.split(" ") # split() method
+words = text.split(" ") # split a string to an array of its words
 
 frequencies = Hash.new(0) # Hash is like object in Js
 
