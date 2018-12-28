@@ -83,3 +83,26 @@
 
 **Methods**
 - `sort`: sorting items alphabetically or in ascending order.
+
+---
+
+**lesson6:**
+- `false` and `nil` are two non-true values in Ruby. It's important to realize that `false` and `nil` are not the same thing: `false` means "not true", while `nil` is Ruby's way of saying "nothing at all."
+- If you try to access a key in a hash that doesn't exist the result will be `nil`.
+- When you give a default value to your hash so if you try to access a nonexistent key in that hash you will get that default as a result not `nil`!
+- *Symbols* always start with a colon `:`. They must be valid Ruby variable names, so the first character after the colon has to be a letter or underscore `_`; after that, any combination of letters, numbers, and underscores is allowed.
+- You can use either *string* or *symbol* as Ruby hash keys. A Ruby symbol is a sort of name. It's important to remember that symbols aren't strings. ` "string" == :string  # false `
+- One of the differences between *string* and *symbol* is while there can be multiple different strings that all have the same value, there's only one copy of any particular symbol at a given time.
+- In Ruby 1.9 the hash syntax changed. The two changes are: You put the colon at the end of the symbol, not at the beginning; and You don't need the hash rocket anymore.
+- `case` statement is like `if/else` statement. It is suitable when we have a lot of conditions and comes with `when` for each condition.
+- *General info* to add, display, update and delete data we have an acronym which is called CRUD for Create, Read, Update and Delete. 
+
+**Methods**
+- `object_id`: gets the ID of an object. It's how Ruby knows whether two objects are the exact same object.
+- `to_sym`: converts to symbol.
+- `to_i`: converts a string to an integer.
+- `intern`: internalizes the string into a symbol and works just like `to_sym`.
+- `select`: filters for values that meet certain criteria.
+- `each_key`: iterates over just keys.
+- `each_value`: iterates over just values.
+- `delete`: `hash.delete(key)`
