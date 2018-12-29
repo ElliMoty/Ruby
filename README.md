@@ -86,7 +86,7 @@
 
 ---
 
-**lesson6:**
+**lesson6:** (28/12/2018)
 - `false` and `nil` are two non-true values in Ruby. It's important to realize that `false` and `nil` are not the same thing: `false` means "not true", while `nil` is Ruby's way of saying "nothing at all."
 - If you try to access a key in a hash that doesn't exist the result will be `nil`.
 - When you give a default value to your hash so if you try to access a nonexistent key in that hash you will get that default as a result not `nil`!
@@ -106,3 +106,58 @@
 - `each_key`: iterates over just keys.
 - `each_value`: iterates over just values.
 - `delete`: `hash.delete(key)`
+
+---
+
+**lesson7:** (29/12/2018)
+- In Ruby you can write your code in different ways; you have different alternatives. In `if` and `unless` statements: 
+```
+if condition                          unless condition
+# Do something!         or            # Do something!
+end                                   end
+```
+
+if the "do something" is a short, simple expression, we can move it up into a single line like:
+```
+expression if boolean        or        expression unless boolean
+```
+
+in this case the *order* is important and you don't need an `end` when you write your `if` or `unless` statement all on one line.
+
+- *ternary conditional expression*:
+```
+boolean ? Do this #if true: Do this #if false
+
+puts 2 < 3 ? "2 is less than 3!" : "2 is not less than 2."
+```
+- In `case` statement you can compress your code like:
+```
+case ---
+  when "---" then puts "----"
+  when "---" then puts "----"
+  else puts "----"
+end
+```
+- `||=`: conditional assignment operator. We can assign a value to a variable if it hasn't already been assigned! If we assigned a value before, it still prints out the value of the previous position.
+- *implicit return*: If we do not ask Ruby to `return` the result in our `def` Ruby automatically will return the result of the last evaluated expression! No problem! :relaxed:
+- `<<`: *concatenation operator* (also known as "the shovel") to add an element to the end of an array or a string.
+- 
+
+**Methods**
+- `upto`: counts up to certain number or letter.
+- `downto`: counts down to certain number or letter.
+- `respond_to?`: takes a symbol and returns `true` if an object can receive that *method* and `false` otherwise. For example:
+```
+[1, 2, 3].respond_to?(:push)  #true
+```
+it is true because we can call push method on an array.
+
+--- 
+
+**lesson8:**
+- 
+
+**Methods**
+- `collect`: takes a block and applies the expression in the block to every element in an array. ((like `map` in Js))
+
+---
