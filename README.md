@@ -188,7 +188,7 @@ lambda { puts "-----" }              in comparison with             Proc.new { p
 execute = Proc.new { # do execute my code }
 execute.call
 ```
-- `is_a?`: returns `true` if an object is the type of object named and `false` otherwise. **Note:** you should always type object named *after* `is_a?` with a capital letter!
+- `is_a?`: returns `true` if an object is the type of object named and `false` otherwise. **Note:** You should always type object named *after* `is_a?` with a capital letter!
 ```
 :string.is_a? Symbol 
 # the answer is true
@@ -202,9 +202,19 @@ execute.call
 - **Global variables** can be declared in two ways.
    1. Define the variables outside of any method or class.
    2. Start it with `$` if you want to make a variable global from inside a method or class.
-- **Class variables** starts with `@@`. Class variables are attached to entire classes.   
-
-**Methods**
-- 
-
+- **Class variables** starts with `@@`. Class variables are attached to entire classes.  
+- Inheritance is the process by which one class takes on the attributes and methods of another, and it's used to express an *is-a* relationship. You can read `<` as "inherits from" in the following code:
+```
+class ChildClass < ParentClass
+  # Some code!
+end 
+```
+- `super` keyword - when you call `super` from inside a method, that tells Ruby to look in the superClass/parentClass of the current class and find a method with the same name and use it.
+- **Note:** Any given Ruby class can have only one superClass/parentClass.
+- *Fancy trick* to save more time and space: If you want to end a Ruby statement without going to a new line, you can just type a semicolon. 
+``` 
+class SubClass < SupperClass; end
+```
 ---
+
+**lesson10:** (31/12/2018)
