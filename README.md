@@ -8,7 +8,7 @@
 
 **Here** I am trying to keep track of my progress in Ruby and share whatever I am learning with sample projects and some explanations.
 
-**Note:** To reach my goal I selected *Ruby* course in [codecademy](https://www.codecademy.com). I will enrich my knowledge in this field later when my course resume in [GA](https://generalassemb.ly) after holiday.
+**Note:** To reach my goal I selected *Ruby* course in [codecademy](https://www.codecademy.com). The following info is extracted form this course. I will enrich my knowledge in this field sooner when my course resume in [GA](https://generalassemb.ly) after holiday.
 
 :clapper: (22/12/2018)
 
@@ -116,12 +116,10 @@ if condition                          unless condition
 # Do something!         or            # Do something!
 end                                   end
 ```
-
 if the "do something" is a short, simple expression, we can move it up into a single line like:
 ```
 expression if boolean        or        expression unless boolean
 ```
-
 in this case the *order* is important and you don't need an `end` when you write your `if` or `unless` statement all on one line.
 
 - *ternary conditional expression*:
@@ -141,7 +139,6 @@ end
 - `||=`: conditional assignment operator. We can assign a value to a variable if it hasn't already been assigned! If we assigned a value before, it still prints out the value of the previous position.
 - *implicit return*: If we do not ask Ruby to `return` the result in our `def` Ruby automatically will return the result of the last evaluated expression! No problem! :relaxed:
 - `<<`: *concatenation operator* (also known as "the shovel") to add an element to the end of an array or a string.
-- 
 
 **Methods**
 - `upto`: counts up to certain number or letter.
@@ -154,10 +151,60 @@ it is true because we can call push method on an array.
 
 --- 
 
-**lesson8:**
-- 
+**lesson8:** (30/12/2018)
+- `yield` - When a method expects a block, it invokes it by calling the *yield* function. Actually `yield` allows you to "inject" that block of code at some place into a method.
+
+- `Proc`: a "saved" block. It is just like you can give a bit of code a name and turn it into a method, you can name a *block* and turn it into a `Proc`. `Proc`s are great for keeping your code DRY. With blocks, you have to write your code out each time you need it; with a `Proc`, you write your code once and can use it many times!
+```
+multiples_of_3 = Proc.new do |n|  # we should call Proc.new to save a block of code.
+  n % 3 == 0
+end
+```
+- `&`: is used to convert the *named* `Proc` into a block when we are going to use it.
+```
+cube = Proc.new { |x| x ** 3 }
+[4, 5, 6].map!(&cube)
+```
+- By using `&` you can also convert symbols to `proc`s!
+```
+array = ["5", "10", "15"]
+integer = array.map(&:to_i)
+# ==> [5, 10, 15]
+```
+- `lambda`: is like `proc` an object. They are identical to `proc`s.
+```
+lambda { puts "-----" }              in comparison with             Proc.new { puts "-----" }
+```
+- Differences between `lambda` and `proc`:
+  1. First, a `lambda` checks the number of arguments passed to it, while a `proc` does not. This means that a `lambda` will throw an error if you pass it the wrong number of arguments, whereas a `proc` will ignore unexpected arguments and assign nil to any that are missing.
+  2. Second, when a `lambda` returns, it passes control back to the calling method; when a `proc` returns, it does so immediately, without going back to the calling method. 
 
 **Methods**
 - `collect`: takes a block and applies the expression in the block to every element in an array. ((like `map` in Js))
+- `map` = `collect` - We have both in Ruby! :relieved:
+- `floor`: rounds a number with a decimal down to the nearest integer. ((like `Math.floor` in Js))
+- `call`: calls `proc` directly.
+```
+execute = Proc.new { # do execute my code }
+execute.call
+```
+- `is_a?`: returns `true` if an object is the type of object named and `false` otherwise. **Note:** you should always type object named *after* `is_a?` with a capital letter!
+```
+:string.is_a? Symbol 
+# the answer is true
+```
+
+---
+
+**lesson9:**
+- `class`: is just a way of organizing and producing objects with similar attributes and methods. By convention, `class` names start with a *capital letter* and use *CamelCase* instead of relying_on_underscores.
+- In Ruby, we use `@` before a variable to signify that it's an **Instance variable**. This means that the variable is attached to the instance of the class.
+- **Global variables** can be declared in two ways.
+   1. Define the variables outside of any method or class.
+   2. Start it with `$` if you want to make a variable global from inside a method or class.
+- **Class variables** starts with `@@`. Class variables are attached to entire classes.   
+
+**Methods**
+- 
 
 ---
