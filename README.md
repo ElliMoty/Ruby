@@ -217,4 +217,16 @@ class SubClass < SupperClass; end
 ```
 ---
 
-**lesson10:** (31/12/2018)
+**lesson10:** (03/01/2018)
+- `public` method: allows for an interface with the rest of the program. This part of your program can be reached by everyone.
+- `private` method: is for your classes to do its own work undisturbed. This part of your program will be unreachable!
+- In order to access `private` information, we have to create `public` methods that know how to get it. This separates the *private implementation* from the *public interface*. 
+- `attr_reader` to *access* an instance variable inside a `class` instead of adding another method to do so. We just need to pass our instance variables (as symbols) to `attr_reader`.
+```
+attr_reader :name
+```
+- `attr_writer` to *change* an instance variable inside a `class`. 
+```
+attr_writer :name
+```
+- `attr_accessor`: if we want to both read and write a particular instance variable in a `class`.
